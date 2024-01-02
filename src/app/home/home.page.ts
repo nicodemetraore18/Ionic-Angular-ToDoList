@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+
+  isOpen : boolean=false;
   constructor() {}
 
 }

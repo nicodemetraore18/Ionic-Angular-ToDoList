@@ -3,15 +3,37 @@
     <ion-title>
       Taches
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="isOpen = false" color="primary"><ion-icon name="add-circle"></ion-icon>Ajouter</ion-button>
+      <ion-button  (click)="isOpen = true"color="danger"><ion-icon name="backspace"></ion-icon>Annuler</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <div class="empty">
+    <small>vous n'avez pas de taches</small>
+  </div>
   <ion-list>
     <ion-list-header>
       Mes taches
     </ion-list-header>
-    <ion-card
+    <ion-card class="task">
+      <ion-checkbox></ion-checkbox>
+      <h4 class="task-title"> Faire la vaisselle</h4>
+      <ion-button fill="clear" color="danger" style="float:right"></ion-button>
+      <ion-icon name="trash"></ion-icon>
+    </ion-card>
+
   </ion-list>
 
 </ion-content>
+
+<ion-footer>
+  <ion-item>
+    <ion-input placeholder="Ajouter une nouvelle tache "></ion-input>
+    <ion-button shape="round" color="primary"></ion-button>
+    <ion-icon name="add"></ion-icon>Ajouter
+
+  </ion-item>
+</ion-footer>
